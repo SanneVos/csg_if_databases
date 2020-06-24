@@ -3,7 +3,7 @@ $check = $check.'database.php geladen.<br>';
 $servernaam = "localhost";
 $gebruikersnaam = "username";
 $wachtwoord = "password";
-$database = "project";
+$database = "demo";
 $DBverbinding = mysqli_connect($servernaam, $gebruikersnaam, $wachtwoord, $database);
 
 if (!$DBverbinding) {

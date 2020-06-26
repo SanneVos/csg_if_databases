@@ -1,0 +1,79 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,600,700|Roboto:400,700|Indie+Flower');
+
+/* Overrulen van standaard-bootstrapinstellingen; je kunt hier ook eigen variabelen maken */
+:root {
+    --primary:#007bff;
+    --secondary:#6c757d;
+    --success:#28a745;
+    --info:#17a2b8;
+    --warning:#ffc107;
+    --danger:#dc3545;
+    --light:#f8f9fa;
+    --dark:#343a40;
+
+    --roze: #c41e80;
+}
+
+html,body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+/*
+    overzicht van nieuwe semantische html5-elementen
+    semantisch wil zeggen dat de naam iets zegt over de content (i.t.t. b.v. div)
+    oude browsers nemen display: block niet standaard over
+    volledige lijst @ https://www.w3schools.com/html/html5_new_elements.asp
+*/
+
+header, section, footer, aside, nav, main, article, figure {
+    display: block;
+}
+
+/*
+    en nu na de standaard-aanpassingen de rest van de css
+*/
+
+body {
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: var(--dark);
+}
+
+.footer-copyright {
+    background-color: var(--roze);
+}
+
+h1 {
+    font-family: 'Indie Flower', sans;
+    color: var(--roze);
+}
+
+h3 {
+    color: var(--roze);
+}
+
+h4 {
+    color: var(--roze);
+}
+
+h6 {
+    font-family: 'Indie Flower', serif;
+    color: var(--light);
+}
+
+input {
+    margin-left: 2em;
+}
+
+.jumbotron h2 {
+    line-height: 0.2;
+}
+
+.alert {
+    text-align: right;
+}

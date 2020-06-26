@@ -25,7 +25,7 @@ else {
         <meta name="author" content="VNR@csg">
         <link rel="stylesheet" href="css/bootstrap441.min.css">
         <link rel="stylesheet" type="text/css" href="css/<?= $css?>">
-        <title>Dutch Painters - <?= $paginaTitel?></title>
+        <title>Foto Bloch - <?= $paginaTitel?></title>
     </head>
 <body>
 
@@ -46,6 +46,9 @@ else {
                         <li class="nav-item <?php if ($paginaTitel=='About') {echo 'active';}?>">
                             <a class="nav-link" href="about.php">About</a>
                         </li>
+                        <li class="nav-item <?php if ($paginaTitel=='Private') {echo 'active';}?>">
+                            <a class="nav-link <?php if (!isset($_SESSION["user"])) {echo 'disabled';}?> " href="private.php">Private</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -59,8 +62,8 @@ else {
 
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
-                <h1 class="display-4">Dutch Painters</h1>
-                <h2 class="display-3">The greatest Dutch Painters</h2>
+                <h1 class="display-4">FOTO BLOCH</h1>
+                <h2 class="display-3">De wereld, mijn wereld.</h2>
             </div>
         </div>
     </header>

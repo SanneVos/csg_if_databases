@@ -17,6 +17,15 @@ $sql = "SELECT * FROM fotos WHERE id = $fotoNummer";
 $record = mysqli_query($DBverbinding, $sql);
 $fotoData = mysqli_fetch_assoc($record);
 
+$sql = "SELECT id,naam FROM accounts";
+$records = mysqli_query($DBverbinding, $sql);
+$namen = [];
+if (mysqli_num_rows($records) > 0) {
+    while($naam = mysqli_fetch_assoc($records)) {
+        $namen[$naam['id']] = utf8_decode($naam['naam']);
+    }
+}
+
 $sql = "SELECT * FROM reacties WHERE foto = $fotoNummer";
 $records = mysqli_query($DBverbinding, $sql);
 $reacties = [];
@@ -50,6 +59,18 @@ if ($volgende > $aantalFotos) {
 echo '<a href="?nr='.$vorige.'"><button type="submit" class="btn btn-secondary mb-2">&#8592;</button></a>';
 echo " <strong>$fotoNummer</strong> ";
 echo '<a href="?nr='.$volgende.'"><button type="submit" class="btn btn-secondary mb-2">&#8594;</button></a>';
+?>
+
+<?php
+if ($reacties == []) {
+    echo '<h3>nog geen reacties</h3>';
+}
+else {
+    echo '<h3>reacties</h3><hr>';
+    foreach ($reacties as $reactie) {
+        echo "<article><h6>{$namen[$reactie['account']]}</h6><p>".utf8_decode($reactie['reactie'])."</p><hr></article>";
+    }
+}
 ?>
                               
             </section>             

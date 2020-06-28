@@ -1,6 +1,6 @@
     <footer class="col-8">
         <div class="footer-copyright text-center mb-3 py-1 bg-roze navbar-light">
-            <em>lelijke footer</em> toont bestaan footer ©2020 vnr@CSG</a>
+            <em></em>©2020 Sanne Vos</a>
         </div>
     </footer>
 </body>

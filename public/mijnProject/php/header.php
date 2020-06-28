@@ -38,9 +38,7 @@ session_start();
             </div>
 
             <div class="col-4 d-flex justify-content-end align-items-center">
-<?php            
-    require('loginFormulier.php');
-?>
+
             </div>
         </div>
 

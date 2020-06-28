@@ -2,19 +2,6 @@
 $check = 'header.php geladen.<br>';
 require('database.php');
 session_start();
-if (isset($_SESSION["user"])) {
-    $check = $check.'gebruiker ingelogd.<br>';
-    // $css = 'private.css'; // in dit voorbeeld maar één stylesheet
-    $css = 'public.css'; // daarom is dit niet nodig, maar ik heb het laten staan voor wie het wil gebruiken
-}
-else {
-    $check = $check.'niemand ingelogd.<br>';
-    $css = 'public.css';
-    if ($paginaType == 'prive') {
-    header("Location: index.php");
-    }
-}
-// require('loginFormulier.php'); Deze wordt nu pas na een stukje html aangeroepen
 ?>
 
 <!doctype html>
